@@ -1,0 +1,240 @@
+
+.user-form {
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out;
+  position: relative;
+  margin-left: 14%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.user-form h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.user-form .form-field  {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+
+.user-form .form-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  display: block;
+  margin-bottom: 8px;
+}
+
+
+.user-form input[type="text"],
+.user-form input[type="email"],
+.user-form input[type="password"],
+.user-form input[type="number"],
+.user-form input[type="file"] {
+  width: 40%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: transparent;
+  color: #444;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-form input[type="text"]:focus,
+.user-form input[type="email"]:focus,
+.user-form input[type="password"]:focus,
+.user-form input[type="number"]:focus {
+  border-color: #00B4D8;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 180, 216, 0.5);
+}
+
+
+.user-form .image-preview {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  transition: transform 0.3s ease;
+}
+
+
+.user-form .image-preview:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.7);
+}
+
+
+.user-form .btn-submit {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #00B4D8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.user-form .btn-submit:hover {
+  background-color: #0077B6;
+  transform: translateY(-4px);
+}
+
+.user-form .btn-submit:focus {
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.7);
+}
+
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.user-form input[type="number"].no-spinner::-webkit-outer-spin-button,
+.user-form input[type="number"].no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.user-form .horizontal-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  gap: 20px;
+}
+
+.user-form .horizontal-group .form-field {
+  flex: 1; 
+  min-width: 400px; 
+}
+
+
+.user-form input[type="text"],
+.user-form input[type="email"],
+.user-form input[type="password"],
+.user-form input[type="number"] {
+  width: 100%; 
+}
+
+
+@media (max-width: 768px) {
+  .user-form {
+    padding: 30px;
+    max-width: 350px;
+  }
+
+  .user-form h2 {
+    font-size: 24px;
+  }
+
+  .user-form input[type="text"],
+  .user-form input[type="email"],
+  .user-form input[type="password"],
+  .user-form input[type="number"] {
+    font-size: 14px;
+  }
+
+  .user-form .btn-submit {
+    font-size: 16px;
+  }
+
+  .user-form .image-preview {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-form {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .user-form h2 {
+    font-size: 20px;
+  }
+
+  .user-form input[type="text"],
+  .user-form input[type="email"],
+  .user-form input[type="password"],
+  .user-form input[type="number"] {
+    font-size: 12px;
+  }
+
+  .user-form .btn-submit {
+    font-size: 14px;
+  }
+
+  .user-form .image-preview {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
+.user-form input[type="text"]:hover,
+.user-form input[type="email"]:hover,
+.user-form input[type="password"]:hover,
+.user-form input[type="number"]:hover {
+  border-color: #00b4d8;
+  background-color: rgba(0, 180, 216, 0.1);
+}
+
+
+.user-form button:hover {
+  transform: translateY(-5px);
+  background-color: #008c9e;
+}
+
+
+@keyframes inputFocus {
+  0% {
+    border-color: #ccc;
+  }
+  100% {
+    border-color: #00b4d8;
+  }
+}
+
+.user-form input[type="text"]:focus,
+.user-form input[type="email"]:focus,
+.user-form input[type="password"]:focus,
+.user-form input[type="number"]:focus {
+  animation: inputFocus 0.3s ease-out;
+}
